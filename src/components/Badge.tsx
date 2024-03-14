@@ -43,21 +43,19 @@ export const Badge = (props: Props) => {
         color: props.poweredByTextColor ?? defaultTextColor,
         'background-color': props.badgeBackgroundColor ?? '#ffffff',
       }}
+    >
+      ⚡️ by
+      <a
+        ref={liteBadge}
+        href={'https://mintventures.xyz'}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="lite-badge"
+        id="lite-badge"
+        style={{ 'font-weight': 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
       >
-        ⚡️ by
-        <a
-          ref={liteBadge}
-          href={'https://mintventures.xyz'}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="lite-badge"
-          id="lite-badge"
-          style={{ 'font-weight': 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
-        >
-          <span> Mint Ventures XYZ</span>
-        </a>
-      </span>
-    );
-    };
-
-  
+        <span> Mint Ventures XYZ</span>
+      </a>
+    </span>
+  );
+};
